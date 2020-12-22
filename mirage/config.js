@@ -26,4 +26,6 @@ export default function() {
 
   this.get('/weeks');
   this.get('/teams');
+  this.get('/team-prices');
+  this.get('/team-prices/:id');
 }
