@@ -1,0 +1,16 @@
+<h4>Market</h4>
+<table>
+  <tr>
+    <th>Team Name</th>
+    <th>Price</th>
+    <th>Price Change</th>
+  </tr>
+
+  {{#each model as |teamPrice|}}
+    <tr>
+      <td>{{teamPrice.team.name}}</td>
+      <td>{{teamPrice.price}}</td>
+      <td>N/A</td>
+    </tr>
+  {{/each}}
+</table>
