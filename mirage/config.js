@@ -29,4 +29,5 @@ export default function () {
   this.get('/teams/:id');
   this.get('/team-prices');
   this.get('/team-prices/:id');
+  this.get('/users/:id');
 }

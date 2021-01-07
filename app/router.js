@@ -10,4 +10,5 @@ Router.map(function () {
   this.route('week', { path: '/weeks/:week_id' }, function () {
     this.route('team-price');
   });
+  this.route('user', { path: '/user/:user_id' });
 });
