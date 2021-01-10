@@ -1,5 +1,4 @@
-export default function() {
-
+export default function () {
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
@@ -25,7 +24,7 @@ export default function() {
   */
 
   this.get('/weeks');
-  this.get('/weeks/:id')
+  this.get('/weeks/:id');
   this.get('/teams');
   this.get('/teams/:id');
   this.get('/team-prices');

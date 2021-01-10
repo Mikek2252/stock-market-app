@@ -6,8 +6,8 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-Router.map(function() {
-  this.route('week', { path: '/weeks/:week_id' }, function() {
+Router.map(function () {
+  this.route('week', { path: '/weeks/:week_id' }, function () {
     this.route('team-price');
   });
 });
