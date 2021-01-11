@@ -30,4 +30,6 @@ export default function () {
   this.get('/team-prices');
   this.get('/team-prices/:id');
   this.get('/users/:id');
+  this.get('/user-stocks');
+  this.get('/user-stocks/:id');
 }
