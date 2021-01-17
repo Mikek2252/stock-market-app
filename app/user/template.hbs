@@ -1,0 +1,24 @@
+<h1>{{model.name}}'s Portfolio</h1>
+<p>Current money: {{model.money}}</p>
+<p>Portfolio value: {{portfolioValue}}</p>
+
+<table>
+  <thead>
+    <th scope="col">Team Name</th>
+    <th scope="col">Quanity</th>
+    <th scope="col">Purchase Week</th>
+    <th scope="col">Purchase Price</th>
+    <th scope="col">Current Price</th>
+  </thead>
+  <tbody>
+    {{#each model.userStocks as |stock|}}
+      <tr>
+        <td>{{stock.teamPrice.team.name}}</td>
+        <td>{{stock.quantity}}</td>
+        <td>{{stock.teamPrice.week.weekNumber}}</td>
+        <td>{{stock.teamPrice.price}}</td>
+        <td>{{stock.currentPrice}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

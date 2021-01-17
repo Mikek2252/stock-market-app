@@ -29,4 +29,19 @@ export default function () {
   this.get('/teams/:id');
   this.get('/team-prices');
   this.get('/team-prices/:id');
+  this.get('/users/:id');
+  this.get('/user-stocks');
+  this.get('/user-stocks/:id', function (schema, request) {
+    let userStock = schema.userStocks.find(request.params.id);
+    let weeks = schema.weeks.all().models;
+    let currentWeek = weeks[weeks.length - 1];
+    let currentTeamPrice = schema.teamPrices.findBy({
+      weekId: currentWeek.id,
+      teamId: userStock.teamPrice.teamId,
+    });
+    let serializedUserStock = this.serialize(userStock);
+    serializedUserStock.data.attributes['current-price'] =
+      currentTeamPrice.price;
+    return serializedUserStock;
+  });
 }
